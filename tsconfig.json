@@ -24,7 +24,8 @@
         "./src/components/*",
         "./src/lib/*",
         "./src/styles/*",
-        "./src/types/*"
+        "./src/types/*",
+        "./public/*"
       ]
     }
   },
