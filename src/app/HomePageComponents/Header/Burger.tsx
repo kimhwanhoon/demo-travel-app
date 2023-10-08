@@ -13,8 +13,10 @@ export default function BurgerMenu() {
   const [opened, { toggle }] = useDisclosure();
   return (
     <Menu
-      withArrow
       onClose={toggle}
+      shadow={'md'}
+      position={'bottom-end'}
+      transitionProps={{ duration: 300, transition: 'scale-y' }}
     >
       <Menu.Target>
         <Burger

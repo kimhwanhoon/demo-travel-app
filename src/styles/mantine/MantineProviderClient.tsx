@@ -2,7 +2,8 @@
 
 import { PrimaryColorsGroup } from '@/types/types';
 import { createTheme, MantineProvider } from '@mantine/core';
-import type { ReactNode } from 'react';
+import { useColorScheme } from '@mantine/hooks';
+import { useState, type ReactNode, useEffect } from 'react';
 
 interface Props {
   children: ReactNode;
@@ -13,8 +14,27 @@ export default function MantineProviderClient({
   children,
   primaryColor,
 }: Props) {
+  const [isDark, setIsDark] = useState<'dark' | 'light' | 'auto'>('auto');
+  const colorScheme = useColorScheme();
+
+  useEffect(() => {
+    colorScheme === 'dark' ? setIsDark('dark') : setIsDark('light');
+  }, [colorScheme]);
+
   const theme = createTheme({
     colors: {
+      DARK_GROUP: [
+        '#d5d7e0',
+        '#acaebf',
+        '#8c8fa3',
+        '#666980',
+        '#4d4f66',
+        '#34354a',
+        '#2b2c3d',
+        '#1d1e30',
+        '#0c0d21',
+        '#01010a',
+      ],
       RED_GROUP: [
         '#ffebea',
         '#fed7d3',
@@ -67,5 +87,13 @@ export default function MantineProviderClient({
     primaryColor,
     primaryShade: 5,
   });
-  return <MantineProvider theme={theme}>{children}</MantineProvider>;
+
+  return (
+    <MantineProvider
+      defaultColorScheme={isDark}
+      theme={theme}
+    >
+      {children}
+    </MantineProvider>
+  );
 }

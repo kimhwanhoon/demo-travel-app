@@ -1,0 +1,64 @@
+'use client';
+
+import { Button, Group } from '@mantine/core';
+import {
+  menuGroup_Customized,
+  menuGroup_Tours,
+  menuGroup_Transportation,
+} from './menuGroups';
+import Link from 'next/link';
+import MenuHoverLink from './MenuHoverLink';
+
+export default function MenuLink() {
+  return (
+    <>
+      <nav className="h-full sm:flex items-center gap-5 md:gap-7 lg:gap-9 hidden ">
+        <Link
+          href="/"
+          className="text-sm md:text-base"
+        >
+          Home
+        </Link>
+        <MenuHoverLink
+          key="Transportation"
+          menuGroup={menuGroup_Transportation}
+          title="Transportation"
+          viewAllHref="/transportation"
+        />
+        <MenuHoverLink
+          key="Tours"
+          menuGroup={menuGroup_Tours}
+          title="Tours"
+          viewAllHref="/tours"
+        />
+        <MenuHoverLink
+          key="Customized Tours"
+          menuGroup={menuGroup_Customized}
+          title="Customized Tours"
+          viewAllHref="/"
+          footer
+          footerTitle="Make your own itinerary"
+          footerDesc="Contact our team and our tour operator will help you building your customized itinerary."
+          footerButtonText="Contact us"
+          footerButtonHref="/customized-tours"
+        />
+      </nav>
+
+      <Group visibleFrom="sm">
+        <Button
+          component={Link}
+          href={'/log-in'}
+          variant="default"
+        >
+          Log in
+        </Button>
+        <Button
+          component={Link}
+          href={'/join'}
+        >
+          Join us
+        </Button>
+      </Group>
+    </>
+  );
+}
