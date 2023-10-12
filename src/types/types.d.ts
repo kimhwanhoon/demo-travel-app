@@ -9,4 +9,11 @@ declare namespace Theme {
     | 'GRAY_GROUP';
 
   type PrimaryColor = Partial<PrimaryColorsGroup>;
+
+  interface CarouselContent {
+    href: string;
+    src: string;
+    title: string;
+    desc: string;
+  }
 }
