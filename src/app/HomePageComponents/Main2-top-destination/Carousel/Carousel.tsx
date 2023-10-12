@@ -13,6 +13,7 @@ interface Props {
 export default function Main2_carousel({ top_destination }: Props) {
   return (
     <Carousel
+      containScroll={'trimSnaps'}
       classNames={{ control: 'data-[inactive]:opacity-0' }}
       slideSize={{
         base: '100%',

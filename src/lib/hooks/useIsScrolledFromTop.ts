@@ -1,17 +1,18 @@
+import saveIsScrolledFromTop from '@/store/saveIsScrolledFromTop';
 import { useWindowScroll } from '@mantine/hooks';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 
 export default function useIsScrolledFromTop() {
   const [scroll] = useWindowScroll();
-  const [scrollMoved, setScrollMoved] = useState<boolean>(false);
+  const { isScrolledFromTop, setIsScrolledFromTop } = saveIsScrolledFromTop();
 
   useEffect(() => {
     if (scroll.y > 50) {
-      setScrollMoved(true);
+      setIsScrolledFromTop(true);
     } else {
-      setScrollMoved(false);
+      setIsScrolledFromTop(false);
     }
-  }, [scroll.y]);
+  }, [scroll.y, setIsScrolledFromTop]);
 
-  return scrollMoved;
+  return isScrolledFromTop;
 }

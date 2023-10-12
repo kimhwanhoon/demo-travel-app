@@ -10,7 +10,9 @@ import {
 } from './Menu/menuGroups';
 
 export default function BurgerMenu() {
+  console.log(1);
   const [opened, { toggle }] = useDisclosure();
+
   return (
     <Menu
       onClose={toggle}

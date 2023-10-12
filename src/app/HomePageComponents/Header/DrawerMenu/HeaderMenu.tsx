@@ -8,6 +8,7 @@ import {
   menuGroup_Transportation,
 } from '../Menu/menuGroups';
 import DrawerMenuElementGroup from './DrawerMenuElementGroup';
+import saveIsScrolledFromTop from '@/store/saveIsScrolledFromTop';
 
 export default function HeaderMenu() {
   const [drawerOpened, { toggle: toggleMenu }] = useDisclosure(false);
@@ -15,11 +16,12 @@ export default function HeaderMenu() {
     useDisclosure(true);
   const [toursOpened, { toggle: toggleTours }] = useDisclosure(true);
   const [customizedOpened, { toggle: toggleCustomized }] = useDisclosure(true);
+  const { isScrolledFromTop } = saveIsScrolledFromTop();
 
   return (
     <>
       <Burger
-        color="white"
+        color={isScrolledFromTop ? 'black' : 'white'}
         hiddenFrom="sm"
         opened={drawerOpened}
         onClick={toggleMenu}

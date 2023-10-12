@@ -28,6 +28,11 @@ export default function Form() {
           />
         )}
         <Checkbox
+          classNames={{
+            description: 'cursor-text',
+            label: 'cursor-pointer',
+            input: 'cursor-pointer',
+          }}
           label="I'm looking for one day tour."
           description="choose to find one day tours only"
           checked={isOnedayTour}
