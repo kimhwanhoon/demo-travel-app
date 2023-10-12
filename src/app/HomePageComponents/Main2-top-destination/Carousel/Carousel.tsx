@@ -14,7 +14,13 @@ export default function Main2_carousel({ top_destination }: Props) {
   return (
     <Carousel
       classNames={{ control: 'data-[inactive]:opacity-0' }}
-      slideSize={{ base: '100%', sm: '50%', md: '33.333333%' }}
+      slideSize={{
+        base: '100%',
+        sm: '50%',
+        md: '33.333333%',
+        lg: '25%',
+        xl: '20%',
+      }}
       slideGap={{ base: 0, sm: 'md' }}
       align="start"
     >

@@ -28,8 +28,7 @@ export default function Form() {
           />
         )}
         <Checkbox
-          defaultChecked
-          label="One day tour?"
+          label="I'm looking for one day tour."
           description="choose to find one day tours only"
           checked={isOnedayTour}
           onChange={() => setIsOnedayTour(!isOnedayTour)}
