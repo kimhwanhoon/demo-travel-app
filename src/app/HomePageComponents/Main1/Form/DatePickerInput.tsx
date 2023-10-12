@@ -30,10 +30,8 @@ export default function DatePickerInput({ type }: Props) {
     >
       <MantineDatePickerInput
         classNames={{ input: 'h-[40px]' }}
-        // mt={10}
         leftSection={<IconCalendar size={20} />}
         clearable
-        // label={type}
         placeholder={`${type} date`}
         minDate={new Date()}
         maxDate={new Date(currentYear + 1, currentMonth, currentDay)}

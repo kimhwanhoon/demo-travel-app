@@ -48,7 +48,7 @@ export default function MenuHoverLink({
           <section className="cursor-pointer">
             <div className="flex items-center gap-[2px]">
               <span
-                className={`text-sm md:text-base md:font-medium ${
+                className={`text-sm md:text-base font-medium ${
                   isScrolled ? 'text-s-gray-900' : 'text-white'
                 }`}
               >
