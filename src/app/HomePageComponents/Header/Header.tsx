@@ -16,7 +16,7 @@ export default function Header() {
     >
       {/* <Logo /> */}
       <h1
-        className={` text-xl font-bold sm:font-extrabold sm:text-2xl ${
+        className={`cursor-pointer text-xl font-bold sm:font-extrabold sm:text-2xl hover:animate-bounce ${
           !isScrolled ? 'text-white' : 'text-s-gray-900'
         }`}
       >
