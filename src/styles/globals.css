@@ -9,3 +9,9 @@
 * than mantine css rules even if they have same specificity.
 * Thanks to this, we CAN use preflight reset from tailwind.
 */
+
+@layer components {
+  .animate-300 {
+    @apply ease-out duration-300 hover:scale-[1.015];
+  }
+}

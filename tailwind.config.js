@@ -1,6 +1,11 @@
-import type { Config } from 'tailwindcss';
+const plugin = require('tailwindcss/plugin');
+const fontSmooth = {
+  '-webkit-font-smoothing': 'antialiased',
+  '-moz-osx-font-smoothing': 'antialiased',
+};
 
-const config: Config = {
+const style = 'duration-[300] transform transition';
+const config = {
   content: [
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
@@ -17,6 +22,9 @@ const config: Config = {
       xl: '1408px',
     },
     extend: {
+      animation: {
+        'spin-slow': 'spin 3s linear infinite',
+      },
       colors: {
         's-red': {
           50: 'hsl(5, 86%, 97%)',
@@ -73,7 +81,24 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ addBase, theme }) {
+      addBase({
+        h1: fontSmooth,
+        h2: fontSmooth,
+        h3: fontSmooth,
+        h4: fontSmooth,
+        h5: fontSmooth,
+        h6: fontSmooth,
+        p: fontSmooth,
+        a: fontSmooth,
+        span: fontSmooth,
+        input: fontSmooth,
+        label: fontSmooth,
+        button: fontSmooth,
+      });
+    }),
+  ],
   corePlugins: {
     // preflight: false,
   },
