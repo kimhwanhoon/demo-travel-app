@@ -6,7 +6,7 @@ export default function LikeButton() {
   const [isHeartHover, setIsHeartHover] = useState<boolean>(false);
   const [isHeartClicked, setIsHeartClicked] = useState<boolean>(false);
   return (
-    <div className="absolute top-2 right-3">
+    <div className="absolute top-2 right-9 z-10">
       {!isHeartClicked ? (
         <ActionIcon
           variant="filled"

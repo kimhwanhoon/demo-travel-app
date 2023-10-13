@@ -3,6 +3,7 @@
 import React from 'react';
 import Carousel from './Carousel';
 import { Rating } from '@mantine/core';
+import LikeButton from './LikeButton';
 
 export default function TourCard() {
   const photoInfo = [
@@ -20,7 +21,8 @@ export default function TourCard() {
     },
   ];
   return (
-    <section className="relative flex flex-col">
+    <section className="relative flex flex-col px-6">
+      <LikeButton />
       <Carousel photoInfo={photoInfo} />
       <h3 className="pt-3 font-bold antialiased">2N3D Seoul Nami Tour</h3>
       <div className="flex flex-col">

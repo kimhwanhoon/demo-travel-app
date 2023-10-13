@@ -6,7 +6,7 @@ interface Props {
 
 export default function Main3_Element({ icon, title, desc }: Props) {
   return (
-    <section className="group/item card-gradient flex flex-col justify-start rounded-xl border-2 p-6 transition-all duration-500 lg:p-7 4xl:p-12 h-[220px]">
+    <section className="group/item card-gradient flex flex-col justify-start rounded-xl border-2 p-6 transition-all duration-500 lg:p-7 4xl:p-12 h-[230px]">
       <div className="relative inline-flex aspect-auto h-16 w-10 object-contain transition-all duration-500 group-hover/item:-translate-y-1 xl:h-[84px] xl:w-16 4xl:h-[110px] 4xl:w-[70px]">
         {icon}
       </div>
