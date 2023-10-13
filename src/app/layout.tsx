@@ -13,6 +13,8 @@ import ChangeColorScheme from '@/components/Affix/ChangeColorScheme';
 
 const nunito = Nunito({ subsets: ['latin'] });
 
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = {
   title: 'Trip Website Demo',
   description: 'Developed by Hwanhoon Kim',
