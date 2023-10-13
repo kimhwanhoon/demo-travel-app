@@ -41,13 +41,13 @@ export default function Main3_Carousel() {
         control: 'data-[inactive]:opacity-0 data-[inactive]:cursor-default',
       }}
       slideSize={{
-        base: '100%',
+        base: '60%',
         sm: '50%',
         md: '33.333333%',
         lg: '25%',
         xl: '20%',
       }}
-      slideGap={{ base: 0, sm: 'md' }}
+      slideGap={{ base: 10, sm: 'md' }}
       align="start"
     >
       {contentData.map((item) => (

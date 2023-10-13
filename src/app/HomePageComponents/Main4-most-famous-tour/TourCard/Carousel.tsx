@@ -42,7 +42,6 @@ export default function Carousel({ photoInfo }: Props) {
               src={photo.src}
               alt={photo.alt}
             />
-            <LikeButton />
           </div>
         </MantineCarousel.Slide>
       ))}
