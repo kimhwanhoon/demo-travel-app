@@ -19,7 +19,7 @@ export default function Form() {
       action=''
       className={`4xl:max-w-[516px] 4xl:p-12 relative w-full  max-w-[400px] rounded-lg p-6 py-10 shadow-2xl sm:m-0 sm:max-w-[380px] sm:p-7 sm:pt-9 md:max-w-[400px] md:shadow-none lg:rounded-xl xl:max-w-[460px] xl:p-9 ${backgroundColor}`}
     >
-      <h1 className='mb-3 text-xl font-extrabold subpixel-antialiased '>
+      <h1 className='mb-3 text-xl font-extrabold '>
         Discover Your Favorite Place
       </h1>
       <section className='flex flex-col gap-3'>

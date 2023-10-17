@@ -24,11 +24,9 @@ export default function TourCard() {
     <section className='relative flex flex-col'>
       <LikeButton />
       <Carousel photoInfo={photoInfo} />
-      <h3 className='pt-3 font-bold antialiased'>2N3D Seoul Nami Tour</h3>
+      <h3 className='pt-3 font-bold '>2N3D Seoul Nami Tour</h3>
       <div className='flex flex-col'>
-        <p className='text-[14px] subpixel-antialiased'>
-          The most famous tour.
-        </p>
+        <p className='text-[14px] '>The most famous tour.</p>
         <p className='text-[13px] text-gray-600'>Seoul, Nami Island</p>
       </div>
       <div className='flex items-center justify-between pt-1'>

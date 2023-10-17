@@ -44,7 +44,7 @@ export default function Main3_Carousel() {
         base: '80%',
         sm: '45%',
         md: '30%',
-        lg: '25%',
+        xl: '25%',
       }}
       slideGap={{ base: 10, sm: 'md' }}
       align='start'
