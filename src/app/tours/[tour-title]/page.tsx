@@ -3,6 +3,7 @@ import { Database } from '@/types/database';
 import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
 import React from 'react';
 import { PhotoGallery } from './components/PhotoGallery/PhotoGallery';
+import { Title } from './components/PhotoGallery/Title';
 
 interface Props {
   searchParams: { ref: string };
@@ -21,9 +22,18 @@ export default async function TourDetailPage({
     .single();
   // console.log(tourInfo);
 
+  const titleProps = {
+    type: tourInfo?.type as string,
+    cat1: tourInfo?.category1 as string,
+    cat2: tourInfo?.category2 as string,
+    title: tourInfo?.title as string,
+    travelArea: tourInfo?.travel_area as string,
+  };
+
   return (
-    <main className='limit-max-width mt-[70px]  '>
+    <main className='limit-max-width'>
       <PhotoGallery photoUrl={tourInfo?.photo_url!} />
+      <Title titleProps={titleProps} />
     </main>
   );
 }

@@ -56,7 +56,7 @@ export const PhotoGallery = ({ photoUrl }: Props) => {
   return (
     <section
       ref={ref}
-      className='animate-300 relative mt-[70px] h-[350px] xs:mt-[80px] xs:h-[400px] xs:px-4 sm:mt-[90px] sm:h-[450px] sm:px-6 lg:h-[500px] xl:h-[600px]'
+      className='animate-300 relative mt-[60px] h-[350px] xs:mt-[80px] xs:h-[400px] xs:px-4 sm:mt-[90px] sm:h-[450px] sm:px-6 lg:h-[500px] xl:h-[600px]'
     >
       <div className='grid h-full grid-cols-8 grid-rows-2 gap-2'>{content}</div>
       <div className='sm: absolute bottom-4 right-3 xs:bottom-2 xs:right-6 sm:right-8'>
