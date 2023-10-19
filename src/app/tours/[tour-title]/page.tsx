@@ -1,9 +1,11 @@
-import Header from '@/components/Header/Header';
 import { Database } from '@/types/database';
 import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
 import React from 'react';
 import { PhotoGallery } from './components/PhotoGallery/PhotoGallery';
-import { Title } from './components/PhotoGallery/Title';
+import { Title } from './components/Title';
+import { Divider } from '@mantine/core';
+import { Description } from './components/Description';
+import { Inclusion } from './components/Inclusion';
 
 interface Props {
   searchParams: { ref: string };
@@ -34,6 +36,17 @@ export default async function TourDetailPage({
     <main className='limit-max-width'>
       <PhotoGallery photoUrl={tourInfo?.photo_url!} />
       <Title titleProps={titleProps} />
+      <Divider
+        my='md'
+        className='mx-4'
+      />
+      <Description description={tourInfo?.desc_long as string} />
+      <Inclusion inclusions={tourInfo?.inclusions as number[]} />
+      <Divider
+        my='sm'
+        className='mx-4'
+      />
+      <div className='py-5'></div>
     </main>
   );
 }

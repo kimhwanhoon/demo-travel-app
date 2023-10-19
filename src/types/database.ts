@@ -205,6 +205,7 @@ export interface Database {
           exclusion: string | null
           id: string
           inclusion: string | null
+          inclusions: number[] | null
           is_famous: boolean
           is_public: boolean
           is_recommened: boolean
@@ -232,6 +233,7 @@ export interface Database {
           exclusion?: string | null
           id?: string
           inclusion?: string | null
+          inclusions?: number[] | null
           is_famous?: boolean
           is_public?: boolean
           is_recommened?: boolean
@@ -259,6 +261,7 @@ export interface Database {
           exclusion?: string | null
           id?: string
           inclusion?: string | null
+          inclusions?: number[] | null
           is_famous?: boolean
           is_public?: boolean
           is_recommened?: boolean

@@ -23,19 +23,19 @@ export const Title = ({
       >
         <Anchor
           component={Link}
-          className='text-base font-semibold tracking-tight'
+          className='text-base font-semibold capitalize tracking-tight'
           href={'#'}
         >
           {type}
         </Anchor>
         <Anchor
-          className='text-base font-semibold tracking-tight'
+          className='text-base font-semibold capitalize tracking-tight'
           href={'#'}
         >
           {cat1}
         </Anchor>
         <Anchor
-          className='text-base font-semibold tracking-tight'
+          className='text-base font-semibold capitalize tracking-tight'
           href={'#'}
         >
           {cat2}
@@ -43,8 +43,8 @@ export const Title = ({
       </Breadcrumbs>
       <div>
         <TitleText
-          size={'h3'}
-          className='tracking-[-0.02rem] xs:my-2 xs:text-2xl sm:text-3xl'
+          size={'h2'}
+          className='my-3 tracking-[-0.02rem] xs:my-3 xs:text-2xl sm:text-3xl'
         >
           {title}
         </TitleText>
