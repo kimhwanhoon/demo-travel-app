@@ -4,6 +4,7 @@ import Logo from '@/logo/Logo';
 import MobileMenu from './DrawerMenu/HeaderMenu';
 import MenuLink from './Menu/MenuLink';
 import useIsScrolledFromTop from '@/lib/hooks/useIsScrolledFromTop';
+import Link from 'next/link';
 
 export default function Header() {
   const isScrolled = useIsScrolledFromTop();
@@ -15,13 +16,14 @@ export default function Header() {
       }`}
     >
       {/* <Logo /> */}
-      <h1
+      <Link
+        href={'/'}
         className={`hover animate-300 cursor-pointer text-xl font-bold hover:scale-105 sm:text-2xl sm:font-extrabold ${
           !isScrolled ? 'text-white' : 'text-s-gray-900'
         }`}
       >
         TourHere
-      </h1>
+      </Link>
       <MenuLink />
       <MobileMenu />
     </header>
