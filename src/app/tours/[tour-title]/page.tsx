@@ -5,7 +5,8 @@ import { PhotoGallery } from './components/PhotoGallery/PhotoGallery';
 import { Title } from './components/Title';
 import { Divider } from '@mantine/core';
 import { Description } from './components/Description';
-import { Inclusion } from './components/Inclusion';
+import { Inclusions } from './components/Inclusions';
+import { Exclusions } from './components/Exclusions';
 
 interface Props {
   searchParams: { ref: string };
@@ -41,11 +42,12 @@ export default async function TourDetailPage({
         className='mx-4'
       />
       <Description description={tourInfo?.desc_long as string} />
-      <Inclusion inclusions={tourInfo?.inclusions as number[]} />
+      <Inclusions inclusions={tourInfo?.inclusions as number[]} />
       <Divider
         my='sm'
         className='mx-4'
       />
+      <Exclusions exclusions={tourInfo?.exclusions as number[]} />
       <div className='py-5'></div>
     </main>
   );

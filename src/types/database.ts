@@ -194,6 +194,63 @@ export interface Database {
         }
         Relationships: []
       }
+      tour_exclusions: {
+        Row: {
+          icon: string
+          id: number
+          popover: string | null
+          title: string
+        }
+        Insert: {
+          icon: string
+          id?: number
+          popover?: string | null
+          title: string
+        }
+        Update: {
+          icon?: string
+          id?: number
+          popover?: string | null
+          title?: string
+        }
+        Relationships: []
+      }
+      tour_icons: {
+        Row: {
+          icon_name: string
+          note: string | null
+        }
+        Insert: {
+          icon_name: string
+          note?: string | null
+        }
+        Update: {
+          icon_name?: string
+          note?: string | null
+        }
+        Relationships: []
+      }
+      tour_inclusions: {
+        Row: {
+          icon: string
+          id: number
+          popover: string | null
+          title: string
+        }
+        Insert: {
+          icon: string
+          id?: number
+          popover?: string | null
+          title: string
+        }
+        Update: {
+          icon?: string
+          id?: number
+          popover?: string | null
+          title?: string
+        }
+        Relationships: []
+      }
       tour_info: {
         Row: {
           category1: string | null
@@ -203,9 +260,10 @@ export interface Database {
           desc_short: string | null
           duration: string | null
           exclusion: string | null
+          exclusions: number[]
           id: string
           inclusion: string | null
-          inclusions: number[] | null
+          inclusions: number[]
           is_famous: boolean
           is_public: boolean
           is_recommened: boolean
@@ -231,9 +289,10 @@ export interface Database {
           desc_short?: string | null
           duration?: string | null
           exclusion?: string | null
+          exclusions?: number[]
           id?: string
           inclusion?: string | null
-          inclusions?: number[] | null
+          inclusions?: number[]
           is_famous?: boolean
           is_public?: boolean
           is_recommened?: boolean
@@ -259,9 +318,10 @@ export interface Database {
           desc_short?: string | null
           duration?: string | null
           exclusion?: string | null
+          exclusions?: number[]
           id?: string
           inclusion?: string | null
-          inclusions?: number[] | null
+          inclusions?: number[]
           is_famous?: boolean
           is_public?: boolean
           is_recommened?: boolean
