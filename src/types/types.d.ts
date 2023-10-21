@@ -16,4 +16,18 @@ declare namespace Theme {
     title: string;
     desc: string;
   }
+
+  type PhotoInfo = {
+    src: string;
+    alt: string;
+  };
+
+  interface TourCard {
+    tourRef: string;
+    photoInfo: PhotoInfo[];
+    title: string;
+    desc: string;
+    tourPlaces: string;
+    priceFrom: number;
+  }
 }

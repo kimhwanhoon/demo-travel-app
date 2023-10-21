@@ -9,26 +9,24 @@ export default function ComboBox() {
   });
 
   const [value, setValue] = useState('');
-  const shouldCitiesFilterOptions = !uniqueCities.some(
-    (item) => item === value
-  );
+  const shouldCitiesFilterOptions = !uniqueCities.some(item => item === value);
   const shouldLocationFilterOptions = !uniqueLocation.some(
-    (item) => item === value
+    item => item === value,
   );
 
   const filteredCitiesOptions = shouldCitiesFilterOptions
-    ? uniqueCities.filter((item) =>
-        item.toLowerCase().includes(value.toLowerCase().trim())
+    ? uniqueCities.filter(item =>
+        item.toLowerCase().includes(value.toLowerCase().trim()),
       )
     : uniqueCities;
 
   const filteredPlacesOptions = shouldLocationFilterOptions
-    ? uniqueLocation.filter((item) =>
-        item.toLowerCase().includes(value.toLowerCase().trim())
+    ? uniqueLocation.filter(item =>
+        item.toLowerCase().includes(value.toLowerCase().trim()),
       )
     : uniqueLocation;
 
-  const citiesOptions = filteredCitiesOptions.map((item) => (
+  const citiesOptions = filteredCitiesOptions.map(item => (
     <Combobox.Option
       value={item}
       key={item}
@@ -37,7 +35,7 @@ export default function ComboBox() {
     </Combobox.Option>
   ));
 
-  const placesOptions = filteredPlacesOptions.map((item) => (
+  const placesOptions = filteredPlacesOptions.map(item => (
     <Combobox.Option
       value={item}
       key={item}
@@ -55,7 +53,7 @@ export default function ComboBox() {
     <Combobox
       transitionProps={{ transition: 'fade' }}
       // offset={0}
-      onOptionSubmit={(optionValue) => {
+      onOptionSubmit={optionValue => {
         setValue(optionValue);
         combobox.closeDropdown();
       }}
@@ -66,9 +64,9 @@ export default function ComboBox() {
           required
           classNames={{ input: 'h-[40px]' }}
           leftSection={<IconMapPin size={22} />}
-          placeholder="Location"
+          placeholder='Location'
           value={value}
-          onChange={(event) => {
+          onChange={event => {
             setValue(event.currentTarget.value);
             combobox.openDropdown();
           }}
@@ -83,14 +81,14 @@ export default function ComboBox() {
           mah={200}
           style={{ overflowY: 'auto' }}
         >
-          <Combobox.Group label="Cities">
+          <Combobox.Group label='Cities'>
             {citiesOptions.length === 0 ? (
               <Combobox.Empty>Nothing found</Combobox.Empty>
             ) : (
               citiesOptions
             )}
           </Combobox.Group>
-          <Combobox.Group label="Tour places">
+          <Combobox.Group label='Tour places'>
             {placesOptions.length === 0 ? (
               <Combobox.Empty>Nothing found</Combobox.Empty>
             ) : (

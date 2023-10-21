@@ -1,3 +1,12 @@
 {
-  "typescript.tsdk": "node_modules/typescript/lib"
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "files.exclude": {
+    "node_modules": false,
+    ".eslintrc.json": false,
+    ".gitignore": false,
+    "bun.lockb": false,
+    "next-env.d.ts": false,
+    "next.config.js": false
+  },
+  "cSpell.words": ["yixiibeskdkkasqanfly"]
 }

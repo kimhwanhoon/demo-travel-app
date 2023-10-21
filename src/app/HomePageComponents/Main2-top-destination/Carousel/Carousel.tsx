@@ -16,16 +16,15 @@ export default function Main2_carousel({ top_destination }: Props) {
       containScroll={'trimSnaps'}
       classNames={{ control: 'data-[inactive]:opacity-0' }}
       slideSize={{
-        base: '70%',
-        sm: '50%',
-        md: '33.333333%',
-        lg: '25%',
-        xl: '20%',
+        base: '80%',
+        sm: '45%',
+        md: '30%',
+        xl: '25%',
       }}
       slideGap={{ base: 10, sm: 'md' }}
-      align="start"
+      align='start'
     >
-      {top_destination.map((item) => (
+      {top_destination.map(item => (
         <Carousel.Slide key={item.id}>
           <Element
             title={item.title}

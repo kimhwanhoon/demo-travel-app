@@ -11,7 +11,7 @@ const getFilenames = (filePath: string): string[] => {
 };
 
 const createUrlPath = (fileNames: string[]): string[] => {
-  return fileNames.map((filename) => `/home/background/${filename}`);
+  return fileNames.map(filename => `/home/background/${filename}`);
 };
 
 export const generateBackgroundUrls = (filePath: string): string[] => {

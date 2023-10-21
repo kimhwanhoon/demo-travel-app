@@ -22,45 +22,45 @@ export default function HeaderMenu() {
     <>
       <Burger
         color={isScrolledFromTop ? 'black' : 'white'}
-        hiddenFrom="sm"
+        hiddenFrom='sm'
         opened={drawerOpened}
         onClick={toggleMenu}
-        aria-label="Toggle navigation"
+        aria-label='Toggle navigation'
       />
       <Drawer
         opened={drawerOpened}
         onClose={toggleMenu}
-        title="Navigation"
-        hiddenFrom="sm"
+        title='Navigation'
+        hiddenFrom='sm'
         overlayProps={{ blur: 1 }}
-        position="right"
+        position='right'
         size={'sm'}
         transitionProps={{ duration: 300, transition: 'slide-left' }}
       >
         <Divider
-          my="sm"
-          mx="-md"
+          my='sm'
+          mx='-md'
         />
-        <section className="flex flex-col gap-2">
+        <section className='flex flex-col gap-2'>
           <DrawerMenuElementGroup
-            key="Transportation Menu"
-            groupTitle="Transportation"
+            key='Transportation Menu'
+            groupTitle='Transportation'
             menuGroup={menuGroup_Transportation}
             isOpen={transportationOpened}
             toggle={toggleTransportation}
           />
-          <Divider my="xs" />
+          <Divider my='xs' />
           <DrawerMenuElementGroup
-            key="Tours Menu"
-            groupTitle="Tours"
+            key='Tours Menu'
+            groupTitle='Tours'
             menuGroup={menuGroup_Tours}
             isOpen={toursOpened}
             toggle={toggleTours}
           />
-          <Divider my="xs" />
+          <Divider my='xs' />
           <DrawerMenuElementGroup
-            key="Customized Menu"
-            groupTitle="Customized"
+            key='Customized Menu'
+            groupTitle='Customized'
             menuGroup={menuGroup_Customized}
             isOpen={customizedOpened}
             toggle={toggleCustomized}

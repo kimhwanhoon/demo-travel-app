@@ -79,7 +79,7 @@ export interface Database {
             columns: ['id'];
             referencedRelation: 'tour_info';
             referencedColumns: ['id'];
-          }
+          },
         ];
       };
       price_per_pax_child: {
@@ -128,7 +128,7 @@ export interface Database {
             columns: ['id'];
             referencedRelation: 'tour_info';
             referencedColumns: ['id'];
-          }
+          },
         ];
       };
       recommended_tours: {

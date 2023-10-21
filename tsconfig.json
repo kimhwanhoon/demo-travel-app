@@ -35,7 +35,10 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "types/*.db.ts",
-    "tailwind.config.js"
+    "tailwind.config.js",
+    "prettier.config.js",
+    "./src/**/*.ts",
+    "./src/**/*.tsx"
   ],
   "exclude": ["node_modules"]
 }

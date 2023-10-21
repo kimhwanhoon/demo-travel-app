@@ -17,16 +17,16 @@ export default function ChangeColorScheme() {
     <Affix position={{ bottom: 10, right: 10 }}>
       {computedColorscheme === 'light' ? (
         <ActionIcon
-          variant="outline"
-          aria-label="toggle dark mode"
+          variant='outline'
+          aria-label='toggle dark mode'
           onClick={() => setColorScheme('dark')}
         >
-          <IconMoonFilled className="p-1" />
+          <IconMoonFilled className='p-1' />
         </ActionIcon>
       ) : (
         <ActionIcon
-          variant="outline"
-          aria-label="toggle dark mode"
+          variant='outline'
+          aria-label='toggle dark mode'
           onClick={() => setColorScheme('light')}
         >
           <IconBrightnessDown />

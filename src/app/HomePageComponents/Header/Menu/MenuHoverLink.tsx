@@ -38,17 +38,17 @@ export default function MenuHoverLink({
     <>
       <HoverCard
         width={600}
-        position="bottom"
-        radius="md"
-        shadow="md"
+        position='bottom'
+        radius='md'
+        shadow='md'
         withinPortal
         transitionProps={{ duration: 300, transition: 'fade' }}
       >
         <HoverCard.Target>
-          <section className="cursor-pointer">
-            <div className="flex items-center gap-[2px]">
+          <section className='cursor-pointer'>
+            <div className='flex items-center gap-[2px]'>
               <span
-                className={`text-sm md:text-base font-medium ${
+                className={`text-sm font-medium md:text-base ${
                   isScrolled ? 'text-s-gray-900' : 'text-white'
                 }`}
               >
@@ -60,19 +60,19 @@ export default function MenuHoverLink({
 
         <HoverCard.Dropdown style={{ overflow: 'hidden' }}>
           <Group
-            justify="space-between"
-            px="md"
+            justify='space-between'
+            px='md'
           >
             <Text fw={500}>{title}</Text>
             <Link
               href={viewAllHref}
-              className="text-xs hover:underline hover:text-s-blue-500"
+              className='text-xs hover:text-s-blue-500 hover:underline'
             >
               View all
             </Link>
           </Group>
 
-          <Divider my="sm" />
+          <Divider my='sm' />
 
           <SimpleGrid
             cols={menuGroup.length < 2 ? 1 : 2}
@@ -84,18 +84,18 @@ export default function MenuHoverLink({
             />
           </SimpleGrid>
           {footer && (
-            <section className="mt-2">
-              <div className="flex justify-between items-center">
+            <section className='mt-2'>
+              <div className='flex items-center justify-between'>
                 <div>
                   <Text
                     fw={500}
-                    fz="sm"
+                    fz='sm'
                   >
                     {footerTitle}
                   </Text>
                   <Text
-                    size="xs"
-                    c="dimmed"
+                    size='xs'
+                    c='dimmed'
                   >
                     {footerDesc}
                   </Text>
@@ -103,7 +103,7 @@ export default function MenuHoverLink({
                 <Button
                   component={Link}
                   href={footerButtonHref ?? '/'}
-                  variant="default"
+                  variant='default'
                 >
                   {footerButtonText}
                 </Button>

@@ -35,13 +35,13 @@ export default function DatePickerInput({ type }: Props) {
         placeholder={`${type} date`}
         minDate={new Date()}
         maxDate={new Date(currentYear + 1, currentMonth, currentDay)}
-        renderDay={(date) => {
+        renderDay={date => {
           const day = date.getDate();
           const today = new Date().getDate();
           return (
             <Indicator
               size={6}
-              color="cyan"
+              color='cyan'
               offset={-1}
               disabled={day !== today}
             >

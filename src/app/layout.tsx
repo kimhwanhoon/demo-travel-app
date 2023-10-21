@@ -8,7 +8,6 @@ import type { Metadata } from 'next';
 import { Nunito } from 'next/font/google';
 
 import MantineProviderServer from '@/styles/mantine/MantineProviderServer';
-import Header from './HomePageComponents/Header/Header';
 import ChangeColorScheme from '@/components/Affix/ChangeColorScheme';
 
 const nunito = Nunito({ subsets: ['latin'] });
@@ -22,15 +21,14 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
-    <html lang="en">
+    <html lang='en'>
       <head>
         <ColorSchemeScript />
       </head>
       <body className={nunito.className}>
         <MantineProviderServer>
-          <Header />
           {children}
-          <ChangeColorScheme />
+          {/* <ChangeColorScheme /> */}
         </MantineProviderServer>
       </body>
     </html>

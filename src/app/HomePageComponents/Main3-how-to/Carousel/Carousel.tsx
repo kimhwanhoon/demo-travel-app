@@ -41,16 +41,15 @@ export default function Main3_Carousel() {
         control: 'data-[inactive]:opacity-0 data-[inactive]:cursor-default',
       }}
       slideSize={{
-        base: '60%',
-        sm: '50%',
-        md: '33.333333%',
-        lg: '25%',
-        xl: '20%',
+        base: '80%',
+        sm: '45%',
+        md: '30%',
+        xl: '25%',
       }}
       slideGap={{ base: 10, sm: 'md' }}
-      align="start"
+      align='start'
     >
-      {contentData.map((item) => (
+      {contentData.map(item => (
         <Carousel.Slide key={item.id}>
           <Main3_Element
             icon={item.icon()}

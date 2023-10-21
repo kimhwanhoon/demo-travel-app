@@ -4,7 +4,6 @@ const fontSmooth = {
   '-moz-osx-font-smoothing': 'antialiased',
 };
 
-const style = 'duration-[300] transform transition';
 const config = {
   content: [
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -78,6 +77,9 @@ const config = {
           900: 'hsl(229, 6%, 34%)',
           950: 'hsl(230, 6%, 20%)',
         },
+      },
+      boxShadow: {
+        upper: '0px -1px 10px -2px #44444490',
       },
     },
   },

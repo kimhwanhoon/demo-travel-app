@@ -25,17 +25,17 @@ export default function Departure() {
         classNames={{ input: 'h-[40px]', root: 'mt-0' }}
         leftSection={<IconPlaneDeparture size={20} />}
         clearable
-        label="Depature"
-        placeholder="Pick date"
+        label='Depature'
+        placeholder='Pick date'
         minDate={new Date()}
         maxDate={new Date(currentYear + 1, currentMonth, currentDay)}
-        renderDay={(date) => {
+        renderDay={date => {
           const day = date.getDate();
           const today = new Date().getDate();
           return (
             <Indicator
               size={6}
-              color="red"
+              color='red'
               offset={-2}
               disabled={day !== today}
             >
@@ -48,8 +48,8 @@ export default function Departure() {
         classNames={{ input: 'h-[40px]', root: 'mt-0' }}
         leftSection={<IconPlaneDeparture size={20} />}
         clearable
-        label="Return"
-        placeholder="Pick date"
+        label='Return'
+        placeholder='Pick date'
         minDate={new Date()}
         maxDate={new Date(currentYear + 1, currentMonth, currentDay)}
       />

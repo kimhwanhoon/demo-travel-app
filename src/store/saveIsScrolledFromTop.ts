@@ -5,7 +5,7 @@ interface IsScrolledFromTopStore {
   setIsScrolledFromTop: (isScrolled: boolean) => void;
 }
 
-const saveIsScrolledFromTop = create<IsScrolledFromTopStore>((set) => {
+const saveIsScrolledFromTop = create<IsScrolledFromTopStore>(set => {
   return {
     isScrolledFromTop: false,
     setIsScrolledFromTop: (isScrolled: boolean) =>
