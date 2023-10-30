@@ -1,6 +1,8 @@
 import { Anchor, Breadcrumbs, Text, Title as TitleText } from '@mantine/core';
-import { IconChevronRight } from '@tabler/icons-react';
+import { IconChevronRight, IconMap } from '@tabler/icons-react';
 import Link from 'next/link';
+import { Tag } from './tags/Tag';
+import { ReactNode } from 'react';
 
 interface Props {
   titleProps: {
@@ -23,20 +25,23 @@ export const Title = ({
       >
         <Anchor
           component={Link}
-          className='text-base font-semibold capitalize tracking-tight'
+          className='font-semibold capitalize tracking-tight'
           href={'#'}
+          size='sm'
         >
           {type}
         </Anchor>
         <Anchor
-          className='text-base font-semibold capitalize tracking-tight'
+          className='font-semibold capitalize tracking-tight'
           href={'#'}
+          size='sm'
         >
           {cat1}
         </Anchor>
         <Anchor
-          className='text-base font-semibold capitalize tracking-tight'
+          className='capitalize tracking-tight'
           href={'#'}
+          size='sm'
         >
           {cat2}
         </Anchor>
@@ -50,13 +55,18 @@ export const Title = ({
         </TitleText>
       </div>
       <div>
-        <Text
+        <Tag
+          icon={<IconMap />}
+          title={travelArea}
+        />
+        {/* <Text
           c={'dimmed'}
           size='sm'
           className='xs:text-base'
         >
-          <span className='font-bold '>Travel Area:</span> {travelArea}
-        </Text>
+          <IconMap className='inline-block h-6 w-6' />
+          {}
+        </Text> */}
       </div>
     </section>
   );

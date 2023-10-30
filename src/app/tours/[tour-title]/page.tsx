@@ -8,6 +8,7 @@ import { Description } from './components/Description';
 import { Inclusions } from './components/Inclusions';
 import { Exclusions } from './components/Exclusions';
 import { FooterBar } from './components/FooterBar';
+import { Itinerary } from './components/Itinerary';
 
 interface Props {
   searchParams: { ref: string };
@@ -35,7 +36,7 @@ export default async function TourDetailPage({
   };
 
   return (
-    <main className='limit-max-width mb-[75px]'>
+    <main className='limit-max-width '>
       <PhotoGallery photoUrl={tourInfo?.photo_url!} />
       <Title titleProps={titleProps} />
       <Divider
@@ -49,6 +50,11 @@ export default async function TourDetailPage({
         className='mx-4'
       />
       <Exclusions exclusions={tourInfo?.exclusions as number[]} />
+      <Divider
+        my='sm'
+        className='mx-4'
+      />
+      <Itinerary itinerary={tourInfo?.itinerary as string} />
       <div className='py-5'></div>
       <FooterBar priceFrom={tourInfo?.price_from as number} />
     </main>
